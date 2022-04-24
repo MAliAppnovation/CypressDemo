@@ -1,0 +1,9 @@
+// this is config file that enables auto-completion for overall project 
+{
+  "include": [
+    "./node_modules/cypress", 
+    "cypress/**/*.js"
+  ]
+}
+
+

@@ -1,0 +1,26 @@
+[
+  {
+  "name": "ExamplePage1",
+  "url": "http://localhost:3000/example-1",
+  "waitForTimeout": 1000
+  }, 
+
+  { 
+  "name": "ExamplePage2",
+  "url": "http://localhost:3000/example-2",
+  "waitForTimeout": 1000
+  }, 
+
+  { 
+  "name": "ExamplePage3",
+  "url": "http://localhost:3000/example-3",
+  "waitForTimeout": 1000
+  }, 
+
+  { 
+    "name": "ExamplePage4",
+    "url": "http://localhost:3000/example-4",
+    "waitForTimeout": 1000
+    }
+  
+]

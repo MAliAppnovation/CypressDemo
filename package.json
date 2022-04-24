@@ -1,0 +1,21 @@
+{
+  "name": "cypresse2edemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cypress run",
+    "runtests": "npm run test --"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/cli": "^1.0.8",
+    "@percy/cypress": "^3.1.1",
+    "cypress": "^9.5.4"
+  },
+  "dependencies": {
+    "puppeteer": "^13.5.2"
+  }
+}
