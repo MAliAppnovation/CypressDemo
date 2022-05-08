@@ -1,4 +1,18 @@
 {
     "baseUrl": "http://localhost:3000/",
-    "projectId": "dkkezx"
+    "projectId": "dkkezx",
+
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+       "reporterEnabled": "mochawesome",
+       "mochawesomeReporterOptions": {
+          "reportDir": "Reports",
+          "quite": true,
+          "overwrite": false,
+          "html": false,
+          "json": true
+       }
+    }
+ 
+
 }
