@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/cypress run",
-    "runtests": "npm run test --"
+    "scripts": "node_modules/.bin/cypress run",
+    "posttest": "npx mochawesome-merge Reports/*.json > mochawesome.json && npx marge mochawesome.json ",
+    "test": "npm run scripts || npm run posttest"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,14 @@
   "devDependencies": {
     "@percy/cli": "^1.0.8",
     "@percy/cypress": "^3.1.1",
-    "cypress": "^9.5.4"
+    "cypress": "^9.5.4",
+    "cypress-audit": "^1.1.0",
+    "cypress-mochawesome-reporter": "^3.0.1",
+    "cypress-multi-reporters": "^1.6.0",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
     "puppeteer": "^13.5.2"
