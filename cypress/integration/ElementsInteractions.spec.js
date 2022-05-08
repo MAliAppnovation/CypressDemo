@@ -1,5 +1,7 @@
 
 import '@percy/cypress'; 
+// import "cypress-audit/commands"; -- imported this in folder 'support -> commands.js' file
+
 
 //alert(Cypress.env('My_ENV_VARAIABLE'));
 
@@ -8,6 +10,7 @@ describe('Basic Page Elements Interaction', ()=> {
         cy.visit('/example-4');
     });
 
+    
     it('Test Case1 - sets the headertext to the items name when doubled clicked', () => {
         cy.get('[data-cy=box-1-items-list] > :nth-child(2)')
         .dblclick();
@@ -21,8 +24,7 @@ describe('Basic Page Elements Interaction', ()=> {
 
     });
 
-    // .only used to run only this test case 
-    it.only('Test Case2 - displays the correct count for the selected checkboxes', () => {
+    it('Test Case2 - displays the correct count for the selected checkboxes', () => {
         cy.get('[data-cy=box-2-selected-count]')
         .invoke('text')
         .should('equal', '0');
@@ -88,5 +90,42 @@ describe('Basic Page Elements Interaction', ()=> {
         cy.percySnapshot('Test Case1'); 
 
     });
+  
+    // using only keyword to run only the lighthouse test 
+    it("should pass the audits", function () {
+        cy.lighthouse({
+            accessibility: 70,
+            performance: 10,
+            seo: 60,
+        },
+        {
+            formFactor: 'desktop',
+            screenEmulation: {disabled: true}
+        }
+        );
+      });
+
+    // using only keyword to run only the lighthouse test 
+    it('should run performance audits using custom thresholds', () => {
+        const customThresholds = {
+            performance: 10,
+            accessibility: 50,
+            seo: 70,
+            'first-contentful-paint': 5000,
+            'largest-contentful-paint': 5000, 
+            'cumulative-layout-shift': 0.1,
+            'total-blocking-time': 1500, 
+        };
+
+        const desktopConfig = {
+            formFactor: 'desktop',
+            screenEmulation: {disabled: true},
+        };
+
+        cy.visit('/');
+        cy.lighthouse(customThresholds, desktopConfig);
+    }); 
 
 });
+
+
