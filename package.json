@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "scripts": "node_modules/.bin/cypress run",
-    "clean-reports": "rm -R -f CypressDemo/mochawesome-report && rm -R -f CypressDemo/mochawesome.json", 
+    "clean-reports": "rm -R -f CypressDemo/mochawesome-report", 
     "pretest": "npm run clean-reports",
     "posttest": "npx mochawesome-merge mochawesome-report/*.json > mochawesome.json && npx marge mochawesome.json ",
     "test": "npm run scripts || npm run posttest"
