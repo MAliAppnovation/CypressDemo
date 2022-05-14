@@ -6,7 +6,7 @@
     "reporterOptions": {
        "reporterEnabled": "mochawesome",
        "mochawesomeReporterOptions": {
-          "reportDir": "/Users/muhammadali/Documents/CypressDemo/mochawesome-report",
+          "reportDir": "CypressDemo/mochawesome-report",
           "quite": true,
           "overwrite": false,
           "html": false,
