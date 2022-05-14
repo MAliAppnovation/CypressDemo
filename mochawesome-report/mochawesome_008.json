@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T19:08:59.495Z",
+    "end": "2022-05-14T19:09:04.400Z",
+    "duration": 4905,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "39faa8f8-a231-4c02-9110-63aafa8bff23",
+      "title": "",
+      "fullFile": "cypress/integration/todomvc-actions.spec.js",
+      "file": "cypress/integration/todomvc-actions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c373dea3-47a5-44eb-ac87-ad13d8183c4f",
+          "title": "todo actions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add a new todo to the list",
+              "fullTitle": "todo actions should add a new todo to the list",
+              "timedOut": null,
+              "duration": 2547,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "todoPageObj.addTodo('Clean room');",
+              "err": {},
+              "uuid": "7916ce70-1b7f-4466-9d1a-e7c0acc13b7d",
+              "parentUUID": "c373dea3-47a5-44eb-ac87-ad13d8183c4f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7916ce70-1b7f-4466-9d1a-e7c0acc13b7d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2547,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

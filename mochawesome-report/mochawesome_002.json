@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T19:08:04.413Z",
+    "end": "2022-05-14T19:08:11.664Z",
+    "duration": 7251,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "18da33e9-5763-4bd0-8e6f-4024ce230054",
+      "title": "",
+      "fullFile": "cypress/integration/BeforeEach.spec.js",
+      "file": "cypress/integration/BeforeEach.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9e342257-8034-4956-ba84-2b12c49fccec",
+          "title": "Text box with max characters",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "prevents the user from typing more characters once max is exceeded",
+              "fullTitle": "Text box with max characters prevents the user from typing more characters once max is exceeded",
+              "timedOut": null,
+              "duration": 6902,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('@charInput').clear();\ncy.get('@charInput').type('qwertyuiopasdfghjklzxcvvnm');\ncy.get('@charInput').should('have.attr', 'value', 'qwertyuiopasdfg');",
+              "err": {},
+              "uuid": "103d5685-afef-4d28-8c60-a7535da01053",
+              "parentUUID": "9e342257-8034-4956-ba84-2b12c49fccec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "103d5685-afef-4d28-8c60-a7535da01053"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6902,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

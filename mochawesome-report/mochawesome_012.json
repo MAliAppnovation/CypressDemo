@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-14T19:10:18.304Z",
+    "end": "2022-05-14T19:10:27.172Z",
+    "duration": 8868,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "283d7023-9b17-452f-a9b2-fa4fd1bf04d3",
+      "title": "",
+      "fullFile": "cypress/integration/ElementsInteractions.spec.js",
+      "file": "cypress/integration/ElementsInteractions.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+          "title": "Basic Page Elements Interaction",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Case1 - sets the headertext to the items name when doubled clicked",
+              "fullTitle": "Basic Page Elements Interaction Test Case1 - sets the headertext to the items name when doubled clicked",
+              "timedOut": null,
+              "duration": 4671,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-1-items-list] > :nth-child(2)').dblclick();\ncy.get('[data-cy=box-1-selected-name]').invoke('text').should('equal', 'Option Two'); // taking Percy snapshot \ncy.percySnapshot('Test Case1');",
+              "err": {},
+              "uuid": "6a9fc464-2941-450d-b239-b1908e749a09",
+              "parentUUID": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Case2 - displays the correct count for the selected checkboxes",
+              "fullTitle": "Basic Page Elements Interaction Test Case2 - displays the correct count for the selected checkboxes",
+              "timedOut": null,
+              "duration": 1341,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-2-selected-count]').invoke('text').should('equal', '0');\ncy.get('[data-cy=box-2-checkboxes] > :nth-child(1) input').check(); //check if the first checkbox elements get selected\ncy.get('[data-cy=box-2-checkboxes] > :nth-child(1) input').should('be.checked'); // another way to verify the text-content on page \ncy.get('[data-cy=box-2-selected-count]').should('have.text', '1');\ncy.get('[data-cy=box-2-checkboxes] > :nth-child(3) input').check();\ncy.get('[data-cy=box-2-selected-count]').invoke('text').should('equal', '2'); // taking Percy snapshot \ncy.percySnapshot('Test Case1');",
+              "err": {},
+              "uuid": "351df869-d5ac-4967-94ef-5164cc8e2ed4",
+              "parentUUID": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Case3 - Dropdown list  - this should display name of currently selected item",
+              "fullTitle": "Basic Page Elements Interaction Test Case3 - Dropdown list  - this should display name of currently selected item",
+              "timedOut": null,
+              "duration": 425,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('[data-cy=box-3-dropdown]').select('Option Two');\ncy.get('[data-cy=box-3-selected-name]').invoke('text').should('equal', 'Option Two'); // taking Percy snapshot \ncy.percySnapshot('Test Case1');",
+              "err": {},
+              "uuid": "d97516d4-a36c-48e1-9cd9-3fbb395a03d2",
+              "parentUUID": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Case4 - Mouse Hover functionality verification",
+              "fullTitle": "Basic Page Elements Interaction Test Case4 - Mouse Hover functionality verification",
+              "timedOut": null,
+              "duration": 450,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// debug statement which can be used in Browser Inspect Mode -> Sources tab\ncy.get('[data-cy=box-4-items-list] > :nth-child(3)').trigger('mouseover').debug(); // assertion for checking EXISTENCE of element\ncy.get('[data-cy=box-4-selected-name]').should('exist'); // assertion for chekcing VISIBILITY of element \ncy.get('[data-cy=box-4-selected-name]').should('be.visible'); // how to use AND for multiple assertions \ncy.get('[data-cy=box-4-selected-name]').invoke('text').should('equal', 'Option Three').and('contains', 'Option'); // Partial Text - Contains assertion \ncy.get('[class=\"sc-htoDjs jiqlbg\"]').contains('Option Three'); // taking Percy snapshot \ncy.percySnapshot('Test Case1');",
+              "err": {},
+              "uuid": "6ff137b0-3262-4b1c-ad45-47905537c142",
+              "parentUUID": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should pass the audits",
+              "fullTitle": "Basic Page Elements Interaction should pass the audits",
+              "timedOut": null,
+              "duration": 393,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.lighthouse({\n  accessibility: 65,\n  performance: 12,\n  seo: 65\n}, {\n  formFactor: 'desktop',\n  screenEmulation: {\n    disabled: true\n  }\n});",
+              "err": {},
+              "uuid": "5bee4cbe-7f62-42e8-8164-1bdba6dc5d24",
+              "parentUUID": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should run performance audits using custom thresholds",
+              "fullTitle": "Basic Page Elements Interaction should run performance audits using custom thresholds",
+              "timedOut": null,
+              "duration": 613,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const customThresholds = {\n  performance: 10,\n  accessibility: 50,\n  seo: 70,\n  'first-contentful-paint': 5000,\n  'largest-contentful-paint': 5000,\n  'cumulative-layout-shift': 0.1,\n  'total-blocking-time': 1500\n};\nconst desktopConfig = {\n  formFactor: 'desktop',\n  screenEmulation: {\n    disabled: true\n  }\n};\ncy.visit('/');\ncy.lighthouse(customThresholds, desktopConfig);",
+              "err": {},
+              "uuid": "91fc8e10-c073-4d3e-a160-271c6c044005",
+              "parentUUID": "467927fb-4d01-4bec-bd6d-a984e8ef2361",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a9fc464-2941-450d-b239-b1908e749a09",
+            "351df869-d5ac-4967-94ef-5164cc8e2ed4",
+            "d97516d4-a36c-48e1-9cd9-3fbb395a03d2",
+            "6ff137b0-3262-4b1c-ad45-47905537c142",
+            "5bee4cbe-7f62-42e8-8164-1bdba6dc5d24",
+            "91fc8e10-c073-4d3e-a160-271c6c044005"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7893,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
