@@ -94,9 +94,9 @@ describe('Basic Page Elements Interaction', ()=> {
     // using only keyword to run only the lighthouse test 
     it("should pass the audits", function () {
         cy.lighthouse({
-            accessibility: 70,
-            performance: 10,
-            seo: 60,
+            accessibility: 65,
+            performance: 12,
+            seo: 65,
         },
         {
             formFactor: 'desktop',
