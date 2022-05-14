@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "scripts": "node_modules/.bin/cypress run",
-    "posttest": "npx mochawesome-merge Reports/*.json > mochawesome.json && npx marge mochawesome.json ",
+    "clean-reports": "rm -R -f /Users/muhammadali/Documents/CypressDemo/mochawesome-report && rm -R -f /Users/muhammadali/Documents/CypressDemo/mochawesome.json", 
+    "pretest": "npm run clean-reports",
+    "posttest": "npx mochawesome-merge mochawesome-report/*.json > mochawesome.json && npx marge mochawesome.json ",
     "test": "npm run scripts || npm run posttest"
+
   },
   "keywords": [],
   "author": "",
